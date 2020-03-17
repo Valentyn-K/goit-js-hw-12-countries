@@ -1,0 +1,228 @@
+/* html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+  background-image: url('./images/bg-pattern.png');
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro h1 {
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.intro img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.country-finder {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.letter {
+  font-size: 60px;
+}
+.letter-b {
+  color: #4285f4;
+}
+.letter-o1 {
+  color: #ea4335;
+}
+.letter-o2 {
+  color: #fbbc05;
+}
+.letter-g {
+  color: #4285f4;
+}
+.letter-l {
+  color: #34a853;
+}
+.letter-e {
+  color: #ea4335;
+}
+
+.country-input {
+  height: 30px;
+  width: 500px;
+}
+
+.input_result-container {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* template */
+
+.single-country-name {
+  text-align: center;
+}
+
+.single-country-data-wraper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.country-info {
+  font-weight: 400;
+}
+
+.single-country-flag-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  width: 200px;
+  height: auto;
+}
+
+/* spiner */
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  /* radial-gradient(
+    ellipse at center,
+    rgba(245, 247, 250, 1) 0%,
+    rgba(230, 233, 237, 1) 100%
+  ); */
+  z-index: 2;
+  font-size: 32px;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.loader div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  will-change: transform;
+}
+.loader div span {
+  display: block;
+  width: 0.5em;
+  height: 0.15em;
+  background: black;
+  -webkit-border-radius: 0.08em;
+  border-radius: 0.08em;
+}
+.loader .item-1 {
+  margin-left: 11.313708496px;
+  margin-top: -11.313708496px;
+  animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+.loader .item-1 span {
+  transform: rotate(45deg) translateZ(0);
+}
+.loader .item-2 {
+  margin-left: 0px;
+  margin-top: -16px;
+  animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+.loader .item-2 span {
+  transform: rotate(180deg) translateZ(0);
+}
+.loader .item-3 {
+  margin-left: -11.313708496px;
+  margin-top: -11.313708496px;
+  animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+.loader .item-3 span {
+  transform: rotate(135deg) translateZ(0);
+}
+.loader .item-4 {
+  margin-left: -16px;
+  margin-top: 0px;
+  animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+.loader .item-4 span {
+  transform: rotate(270deg) translateZ(0);
+}
+.loader .item-5 {
+  margin-left: -11.313708496px;
+  margin-top: 11.313708496px;
+  animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+.loader .item-5 span {
+  transform: rotate(225deg) translateZ(0);
+}
+.loader .item-6 {
+  margin-left: 0px;
+  margin-top: 16px;
+  animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+.loader .item-6 span {
+  transform: rotate(360deg) translateZ(0);
+}
+.loader .item-7 {
+  margin-left: 11.313708496px;
+  margin-top: 11.313708496px;
+  animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+.loader .item-7 span {
+  transform: rotate(315deg) translateZ(0);
+}
+.loader .item-8 {
+  margin-left: 16px;
+  margin-top: 0px;
+  animation: spin_full 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
+.loader .item-8 span {
+  transform: rotate(450deg) translateZ(0);
+}
+
+@keyframes spin_full {
+  0% {
+    transform: rotate(0deg) translateZ(0);
+  }
+  100% {
+    transform: rotate(360deg) translateZ(0);
+  }
+}
